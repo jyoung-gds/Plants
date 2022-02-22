@@ -3,8 +3,11 @@ var mongoose = require('mongoose');
 const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;
+const csvtojson = require('csvtojson');
 
-const indexRouter = require('./index.js')
+
+const indexRouter = require('./routes/index.js')
+const plantsRouter = require('./routes/plants.js')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -20,6 +23,8 @@ mongoose.connect(mongoDbUrl, {
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
+
 app.listen(process.env.PORT || port);
 
-app.use('/', indexRouter)
+app.use('/', indexRouter);
+app.use('/plants', plantsRouter);
