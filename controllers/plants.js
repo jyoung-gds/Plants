@@ -1,15 +1,13 @@
-var Plants = require('../models/plants');
+var Plant = require('../models/plants');
+// var Planttest = require('../models/testplant');
 
 var PlantsController = {
   Index: function(req,res){
-
-    Plants.find(function(req,red){
-      if (err) {throw err;}
-      else{
-        console.log('HELLOO')
-        console.log(req.body)
-        res.render('plant', {plants:req.body})
-      }
+      Plant.find(function(err,plants){
+        if(err){throw err;}
+        // console.log(plants)
+        res.render('plant', {plants: plants})
+      
     });
     
   }

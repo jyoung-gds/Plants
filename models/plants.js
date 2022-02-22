@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
-const csvtojson = require('csvtojson');
 
-var PlantsSchema = new mongoose.Schema({
+var PlantSchema = new mongoose.Schema({
   Scientific_Name: String,
   Common_Name: String,
   img_name: String,
@@ -25,7 +24,7 @@ var PlantsSchema = new mongoose.Schema({
   Bloom_Description: String
 });
 
-var Plant = mongoose.model('Plant', PlantsSchema);
+var Plant = mongoose.model('Plant', PlantSchema);
 module.exports = Plant;
 
 // Potentially need a db connection set up here
