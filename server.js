@@ -5,7 +5,9 @@ const app = express();
 const port = 3000;
 
 const indexRouter = require('./routes/index.js')
+const filterRouter = require('./routes/filter.js')
 const plantsRouter = require('./routes/plants.js')
+
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -24,5 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 // app.listen(process.env.PORT || port);
 app.listen(port);
 
+
 app.use('/', indexRouter);
+app.use('/filter', filterRouter);
 app.use('/plants', plantsRouter);
