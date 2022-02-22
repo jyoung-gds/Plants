@@ -4,7 +4,8 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;
 
-const indexRouter = require('./index.js')
+const indexRouter = require('./routes/index.js')
+const filterRouter = require('./routes/filter.js')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
@@ -23,3 +24,4 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 app.listen(process.env.PORT || port);
 
 app.use('/', indexRouter)
+app.use('/filter', filterRouter)
