@@ -6,12 +6,14 @@ const port = 3000;
 
 const indexRouter = require('./routes/index.js')
 const filterRouter = require('./routes/filter.js')
+const plantsRouter = require('./routes/plants.js')
+
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', "layouts/layout")
 app.use(expressLayouts)
-app.use(express.static('public '))
+app.use(express.static('public'))
 
 var mongoDbUrl = process.env.MONGODB_URL || 'mongodb://localhost/plants';
 mongoose.connect(mongoDbUrl, {
@@ -21,7 +23,10 @@ mongoose.connect(mongoDbUrl, {
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-app.listen(process.env.PORT || port);
+// app.listen(process.env.PORT || port);
+app.listen(port);
 
-app.use('/', indexRouter)
-app.use('/filter', filterRouter)
+
+app.use('/', indexRouter);
+app.use('/filter', filterRouter);
+app.use('/plants', plantsRouter);

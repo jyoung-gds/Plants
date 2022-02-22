@@ -1,0 +1,13 @@
+<h1>All plants</h1>
+
+<% plants.forEach(function(plant){ %>
+  <li class="plants-looping">
+      <div class="single-plant">
+          <span class="date" style="text-align:left">
+          <%= plant.Common_Name%>
+          <br>
+          <img src='img/<%=plant.img_name%>' style='height:100px; width:100px;'>
+          <br>
+      </div>
+  </li>
+  <% }) %>
