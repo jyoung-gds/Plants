@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "setup": "node dataUploader.js",
     "start": "nodemon server.js",
     "test": "jest"
   },
