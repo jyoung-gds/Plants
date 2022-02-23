@@ -1,6 +1,9 @@
 name: Feature Tests (Cypress)
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   cypress-run:
@@ -14,3 +17,11 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        with:
+          start: npm start
+
+      - name: Run Jest
+        run: npm test
+
+      - name: Run ESLint
+        run: npm run lint
