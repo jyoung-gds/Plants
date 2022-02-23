@@ -10,5 +10,3 @@ jobs:
         uses: actions/checkout@v1
       - name: ESLint run
         uses: stefanoeb/eslint-action@1.0.2
-        with:
-          files: controllers/, models/, routes/, spec/, views/, cypress/integration/
