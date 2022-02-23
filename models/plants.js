@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var PlantSchema = new mongoose.Schema({
+const PlantSchema = new mongoose.Schema({
   Scientific_Name: String,
   Common_Name: String,
   img_name: String,
@@ -21,8 +21,8 @@ var PlantSchema = new mongoose.Schema({
   Humidity: String,
   Air_Purifying: String,
   Ph_Soil: String,
-  Bloom_Description: String
+  Bloom_Description: String,
 });
 
-var Plant = mongoose.model('Plant', PlantSchema);
+const Plant = mongoose.model('Plant', PlantSchema);
 module.exports = Plant;

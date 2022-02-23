@@ -1,0 +1,14 @@
+name: Linting Tests (ESLint)
+
+on: [push]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: ESLint run
+        uses: stefanoeb/eslint-action@1.0.2
+        with:
+          files: controllers/, models/, routes/, spec/, views/, cypress/integration/

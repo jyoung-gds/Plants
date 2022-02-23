@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-var FilterController = require('../controllers/filter')
+const FilterController = require('../controllers/filter');
 
-router.get('/new', FilterController.New)
+router.get('/new', FilterController.New);
 
 module.exports = router;
