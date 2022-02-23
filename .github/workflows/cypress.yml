@@ -10,4 +10,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Cypress run
+        run: npm install
+        run: npm install cypress@9.5.0 --save-dev
+        run: npm start
         run: npm run test:integration

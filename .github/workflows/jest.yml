@@ -11,4 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Run Jest
+      run: npm install
+      run: npm install jest@27.5.1
+      run: npm start
       run: npm run test:unit

@@ -9,4 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: ESLint run
+        run: npm install
+        run: npm install eslint@7.32.0 --save-dev
+        run: npm start
         run: npm run lint
