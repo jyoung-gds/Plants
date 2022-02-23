@@ -9,6 +9,7 @@
     "test:unit": "jest",
     "test:integration": "cypress run",
     "lint": "eslint .",
+    "test": "jest",
     "cypress:open": "cypress open"
   },
   "keywords": [],
