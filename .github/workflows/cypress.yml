@@ -11,6 +11,7 @@ jobs:
 
       - name: Install modules
         run: npm install
+        run: npm start
 
       - name: Cypress run
         uses: cypress-io/github-action@v2
