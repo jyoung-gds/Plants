@@ -9,4 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: ESLint run
-        uses: stefanoeb/eslint-action@1.0.2
+        uses: sibiraj-s/action-eslint@v2
+        with: 
+          eslint-args: '--ignore-path=.gitignore --quiet'
+          extensions: 'js,jsx,ts,tsx'
+          annotations: true
