@@ -4,10 +4,10 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = 3000;
 
-const indexRouter = require('./routes/index.js')
-const filterRouter = require('./routes/filter.js')
-const plantsRouter = require('./routes/plants.js')
-const confirmationRouter = require('./routes/confirmation.js')
+const indexRouter = require('./routes/index.js');
+const filterRouter = require('./routes/filter.js');
+const plantsRouter = require('./routes/plants.js');
+const confirmationRouter = require('./routes/confirmation.js');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');

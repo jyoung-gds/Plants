@@ -12,13 +12,13 @@ const PlantsController = {
     });
   },
 
-  Doctor: function(req,res){
+  Doctor: function(req, res) {
     res.render('plantDoc');
   },
 
-  Single: function(req,res){
+  Single: function(req, res) {
     res.send('hello - single plant with ID');
-  }
+  },
 };
 
 module.exports = PlantsController;

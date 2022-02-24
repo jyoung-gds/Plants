@@ -1,4 +1,4 @@
-var Plant = require('../models/plants');
+const Plant = require('../models/plants');
 const FilterController = {
 
   New: function(req, res) {
@@ -7,15 +7,18 @@ const FilterController = {
 
   Filter: function(req, res) {
     // console.log(req.query)
-      Plant.find({ 
+    Plant.find({
       Sunlight: req.query.sunlight,
       Moisture: req.query.moisture,
       Indoor_Flowering: req.query.indoorFlowering,
-      Toxic_Dogs: req.query.toxicToAnimals  
-      }).exec(function (err, filtered_plants){
-      if (err){ throw err;}
-      res.render('filteredPlants', {filteredPlants : filtered_plants});
-    });}
+      Toxic_Dogs: req.query.toxicToAnimals,
+    }).exec(function(err, filteredPlants) {
+      if (err) {
+        throw err;
+      }
+      res.render('filteredPlants', {filteredPlants: filteredPlants});
+    });
+  },
 };
 
 module.exports = FilterController;
