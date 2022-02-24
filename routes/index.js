@@ -14,5 +14,3 @@ router.get('/confirmation/confirmation', function (req, res) {
 })
 
 module.exports = router;
-
-
