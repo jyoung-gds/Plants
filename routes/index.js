@@ -10,7 +10,7 @@ router.get('/filter/new', function(req, res) {
 })
 
 router.get('/confirmation/confirmation', function (req, res) {
-  res.render('../views/form/index')
+  res.render('../views/form/confirmation')
 })
 
 module.exports = router;
