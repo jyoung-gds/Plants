@@ -11,6 +11,14 @@ const PlantsController = {
       res.render('plant', {plants: plants});
     });
   },
+
+  Doctor: function(req,res){
+    res.render('plantDoc');
+  },
+
+  Single: function(req,res){
+    res.send('hello - single plant with ID');
+  }
 };
 
 module.exports = PlantsController;
