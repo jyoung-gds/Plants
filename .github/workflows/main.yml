@@ -1,4 +1,4 @@
-name: Feature Tests (Cypress)
+name: All Tests
 
 on:
   push:
@@ -14,9 +14,6 @@ jobs:
 
       - name: Install modules
         run: npm install
-        
-      - name: Connect DB
-        run: npm run setup
         
       - name: Run ESLint
         run: npm run lint
