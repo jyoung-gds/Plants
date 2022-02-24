@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Doctor</title>
+  <style> 
+
+  body {
+    font-family: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+    font-style: inherit;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  #intro{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  #scrolly{
+    position:relative
+  }
+
+  article {
+			position: relative;
+      text-align: center;
+			padding: 0 1rem;
+			margin: 0 auto;
+			width: 33%;
+		}
+
+		.step {
+			margin: 2rem auto 4rem auto;
+			background-color: green;
+			color: #fff;
+		}
+
+		.step.is-active {
+			background-color: greenyellow;
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+
+    #form{
+      text-align: left;
+      padding-left: 550px;
+    }
+  </style> 
+</head>
+<body>
+  <section id='intro'>
+    <h1>Plant Doctor</h1>
+    <p>Start scrolling to get your advice!</p>
+    <img src='https://images.squarespace-cdn.com/content/v1/556ea5c8e4b081da85e406c7/1588138783050-XSITJQ6CAQ1G3DY1625A/How-to-Make-a-Plant-Love-You-book-walk.gif?format=200w.gif'>
+  </section>
+
+  <section id= 'scrolly'>
+    <article>
+      <div class='step' data-step="1" style="padding: 150px 20px;" data-scrollama-index="0"> 
+        <h3> Do you feel like your plants <em style='font-style: italic; font-size:23px;'>aren't looking happy & healthy</em>  despite the love you pour into them?</h3>
+      </div> 
+      <div class='step' data-step="2" style="padding: 250px 0px;" data-scrollama-index="1"> 
+        <h3> We know you <b style = 'font-size: 40px'>try</b> to remember to water them regularly and give them enough sunlight</h3>
+      </div> 
+      <div class='step' data-step="3" style="padding: 100px 0px;" data-scrollama-index="2"> 
+        <h3> <b style = 'font-size: 40px'>Maybe</b> even play them the <a href='https://open.spotify.com/album/4Pj4zPHuEUPtfacdeTlqUG'>plantasia Spotify playlist</a> to keep them happy</h3>
+      </div> 
+      <div class= 'step' data-step='4' style="padding: 181px 0px;" data-scrollama-index="3">
+        <h3> <b style = 'font-size: 40px'>BUT</b> somehow it's not working.... that's okay! You just need the <b style = 'font-size: 30px'>plant doctor.</b></h3>
+      </div>
+    </article>
+  </section>
+
+  <h1 style='text-align: center;'>Complete the form below to get advice. We'll get your planty friends looking green again!</h1>
+  <section id = 'form'>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputName">Name</label>
+          <input type="name" class="form-control" id="inputName" placeholder="Name">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputPlantType">Plant type</label>
+          <input type="text" class="form-control" id="inputPlantType" placeholder="Succulent">
+        </div>
+      <div class="form-group">
+          <label for="inputDescription">Description</label>
+          <input type="text" class="form-control" id="inputDescription" placeholder="Looking a little brown..">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          Photo: <input id="photo" type="file" name="photo">
+        </div>
+      <button type="submit" class="btn btn-primary">Get answers!</button>
+    </form>
+
+
+  </section>
+  
+  <script src="https://unpkg.com/scrollama"></script>
+  <script> 
+  // Select the events we want to monitor 
+  var scrolly = document.querySelector('#scrolly');
+  var article = scrolly.querySelector('article');
+  var step = article.querySelectorAll('.step');
+
+  var scroller = scrollama();
+
+  function handleStepEnter(response){
+    console.log(response);
+    response.element.classList.add('is-active')
+  }
+  
+  function handleStepExit(response){
+    console.log(response);
+    response.element.classList.remove('is-active')
+  }
+
+  scroller.setup({
+    step: '#scrolly article .step',
+    debug: false,
+		offset: 0.5
+  }).onStepEnter(handleStepEnter)
+  .onStepExit(handleStepExit);
+
+  </script>
+
+</body>
+</html>

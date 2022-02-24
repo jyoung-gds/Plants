@@ -1,0 +1,24 @@
+<h1>Plants for you!</h1>
+
+<%if (filteredPlants.length == 0){%>
+  <h2>Sorry, we don't have anything that matches your criteria.</h2>
+<%} else {%>
+<% filteredPlants.forEach(function(plant){ %>
+  <li class="plants-looping">
+      <div class="single-plant">
+          <span class="date" style="text-align:left">
+          <%= plant.Common_Name%>
+          <br>
+          <form method='GET' action='/plants/<%= plant.id%>'> 
+          <%= plant.Scientific_Name%></a>
+          <button type='submit'> Get more info!</button>
+          </form>
+          <br>
+          <img src='/img/<%=plant.img_name%>' style='height:100px; width:100px;'>
+          <br>
+      </div>
+  </li>
+  <% })%>
+  <% }%>
+
+
