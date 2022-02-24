@@ -30,4 +30,4 @@ app.listen(port);
 app.use('/', indexRouter);
 app.use('/filter', filterRouter);
 app.use('/plants', plantsRouter);
-app.use('/confirmation',confirmationRouter);
+app.use('/confirmation', confirmationRouter);
