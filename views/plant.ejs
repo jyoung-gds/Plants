@@ -1,13 +1,21 @@
-<h1>All plants</h1>
+<h1 style="text-align: center;">Plants to cheer you up!!!</h1>
 
 <% plants.forEach(function(plant){ %>
-  <li class="plants-looping">
+
+ <body style="background-color: greenyellow">
+
+  <ul style="text-align: center;" class="plants-looping">
       <div class="single-plant">
           <span class="date" style="text-align:left">
           <%= plant.Common_Name%>
           <br>
           <img src='img/<%=plant.img_name%>' style='height:100px; width:100px;'>
           <br>
+          <form id= 'Buy plant'action='/confirmation' method='Get' action='Buy plant'>
+           <h1 style="text-align:center"> <button> Buy plant </button> </h1>
+           
+          </form>
       </div>
-  </li>
+    </ul>
+</body>
   <% }) %>

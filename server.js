@@ -7,6 +7,7 @@ const port = 3000;
 const indexRouter = require('./routes/index.js')
 const filterRouter = require('./routes/filter.js')
 const plantsRouter = require('./routes/plants.js')
+const confirmationRouter = require('./routes/confirmation.js')
 
 
 app.set('view engine', 'ejs')
@@ -30,3 +31,4 @@ app.listen(port);
 app.use('/', indexRouter);
 app.use('/filter', filterRouter);
 app.use('/plants', plantsRouter);
+app.use('/confirmation',confirmationRouter);

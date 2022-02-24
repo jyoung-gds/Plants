@@ -5,4 +5,14 @@ router.get('/', function(req,res) {
   res.render('index')
 })
 
+router.get('/filter/new', function(req, res) {
+  res.render('../views/form/index')
+})
+
+router.get('/confirmation/confirmation', function (req, res) {
+  res.render('../views/form/index')
+})
+
 module.exports = router;
+
+
