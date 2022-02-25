@@ -1,4 +1,4 @@
-name: Feature Tests (Cypress)
+name: All Tests
 
 on:
   push:
@@ -14,14 +14,14 @@ jobs:
 
       - name: Install modules
         run: npm install
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm start
-
+        
+      - name: Run ESLint
+        run: npm run lint
+        
       - name: Run Jest
         run: npm test
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Run Cypress
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm start

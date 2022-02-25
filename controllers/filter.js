@@ -12,11 +12,11 @@ const FilterController = {
       Moisture: req.query.moisture,
       Indoor_Flowering: req.query.indoorFlowering,
       Toxic_Dogs: req.query.toxicToAnimals,
-    }).exec(function(err, filtPlants) {
+    }).exec(function(err, filteredPlants) {
       if (err) {
         throw err;
       }
-      res.render('filteredPlants', {filteredPlants: filtPlants});
+      res.render('filteredPlants', {filteredPlants: filteredPlants});
     });
   },
 };

@@ -2,11 +2,11 @@ describe('Filter page', function() {
   it('user can submit the plant filter form', function() {
     cy.visit('/filter/new');
 
-    cy.get('#plant-filtering-form').find('#bloom-colour').select('red');
-    cy.get('#plant-filtering-form').find('#humidity').select('low');
+    cy.get('#plant-filtering-form').find('#moisture').select('Low');
+    cy.get('#plant-filtering-form').find('#indoor-flowering').select('Yes');
     cy.get('#plant-filtering-form').submit();
 
-    cy.url().should('contain', 'bloom-colour=red');
-    cy.url().should('contain', 'humidity=low');
+    cy.url().should('contain', 'moisture=Low');
+    cy.url().should('contain', 'indoorFlowering=Yes');
   });
 });
