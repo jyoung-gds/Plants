@@ -71,3 +71,9 @@ button{
   /* border-radius: 75%; */
 }
 
+.plantDoc-flexbox-container-2 {
+  display:flex;
+  background-color: palegoldenrod;
+  flex-direction: column;
+}
+
