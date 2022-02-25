@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plant Doctor</title>
+  <!-- <link rel='stylesheet' href='/stylesheets/plantDoc.css'> -->
   <style> 
 
   body {
@@ -50,10 +51,35 @@
 			font-size: 1.5rem;
 		}
 
-    #form{
-      text-align: left;
-      padding-left: 550px;
+    form{
+      padding: 16px;
+      width: 320;
+      margin: 0 auto;
+      /* background-color: rgb(104, 152, 111);} */
     }
+
+    label{
+      height: 50px; 
+      width: 100px; 
+    }
+
+    button, input {
+    height: 50px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px; 
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    color:white;
+    text-shadow:  #FFF;
+    background-color: rgb(104, 152, 111);
+    }
+
   </style> 
 </head>
 <body>
@@ -79,39 +105,36 @@
       </div>
     </article>
   </section>
-
   <h1 style='text-align: center;'>Complete the form below to get advice. We'll get your planty friends looking green again!</h1>
   <section id = 'form'>
     <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputName">Name</label>
-          <input type="name" class="form-control" id="inputName" placeholder="Name">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputPlantType">Plant type</label>
-          <input type="text" class="form-control" id="inputPlantType" placeholder="Succulent">
-        </div>
-      <div class="form-group">
-          <label for="inputDescription">Description</label>
-          <input type="text" class="form-control" id="inputDescription" placeholder="Looking a little brown..">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          Photo: <input id="photo" type="file" name="photo">
-        </div>
-      <button type="submit" class="btn btn-primary">Get answers!</button>
+      <ul>
+      <label>
+        <ul> <input type="text" placeholder="Name"/> </ul>
+      </label>
+      <label>
+        <ul> <input type="text" placeholder="Email Address"/></ul>
+      </label>
+      <label>
+        <ul> <input type="password" placeholder="Password"/></ul>
+      </label>
+      <label>
+        <ul> <input type="text" placeholder="Plant type"/></ul>
+      </label>
+      <label>
+        <ul>  <input id='description' type="text" placeholder="Description"/></ul>
+      </label>
+      <!-- <label>
+        <ul>  <input id="photo" type="file" name="photo"></ul>
+      </label> -->
+      <form action ='/' method='GET'>
+      <button class= 'submit-button' type="submit">Get answers</button>
     </form>
-
-
+    </ol>
+    </form>
   </section>
+
+  
   
   <script src="https://unpkg.com/scrollama"></script>
   <script> 
