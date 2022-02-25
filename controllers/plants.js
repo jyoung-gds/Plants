@@ -12,13 +12,21 @@ const PlantsController = {
     });
   },
 
-  Doctor: function(req,res){
+  Doctor: function(req, res) {
     res.render('plantDoc');
   },
 
-  Single: function(req,res){
-    res.send('hello - single plant with ID');
-  }
+  Single: function(req, res) {
+    const plantIDClicked = req.params.id;
+    Plant.find({_id: plantIDClicked}).exec(function(err, plantSelected) {
+      if (err) {
+        throw err;
+      }
+
+      // console.log(plant);
+      res.render('singlePlant', {plantID: req.params.id, plant: plantSelected});
+    });
+  },
 };
 
 module.exports = PlantsController;
