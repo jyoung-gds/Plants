@@ -1,22 +1,26 @@
-.kaboodle-module {
+/* https://s3-us-west-2.amazonaws.com/kaboodle/kaboodle.css */
+
+.advert-module {
   overflow: hidden;
   margin: 10px auto;
   text-align: center;
+  border: solid #333;
 }
 
-a.kaboodle-header {
-   float: right;
-   text-align: right;
+a.advert-header {
+   float: left;
+   text-align: left;
    margin: 0px 0px 10px 0px;
-   padding: 3px 6px 3px 0px;
+   padding: 3px 6px 6px 6px;
    background-color: #333;
    font-size: 14px;
    width: 100%;
    color: white;
+   text-decoration: none;
 }
 
 
-.kaboodle-item {
+.advert-item {
   display: inline-block;
   width: 220px;
   overflow: hidden;
@@ -24,8 +28,14 @@ a.kaboodle-header {
   text-align: left;
 }
 
-.kaboodle-item p {
-  height: 60px;
+.advert-item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advert-item p {
+  height: 75px;
   margin-bottom: 0px;
   overflow: hidden;
   font-weight: bold;
@@ -33,7 +43,7 @@ a.kaboodle-header {
   color: black;
 }
 
-.kaboodle-item:hover {
+.advert-item:hover {
   cursor: pointer;
   text-decoration: underline;
 }
