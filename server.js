@@ -23,8 +23,8 @@ mongoose.connect(mongoDbUrl, {
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-// app.listen(process.env.PORT || port);
-app.listen(port);
+app.listen(process.env.PORT || port);
+// app.listen(port);
 
 
 app.use('/', indexRouter);
