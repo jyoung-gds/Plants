@@ -1,23 +1,48 @@
-<h1 style="text-align: center;">Plants to cheer you up!!!</h1>
+<style>
+  
+  .flexibox{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly center;
+    flex-wrap: wrap;
+  }
 
+.flexibox-input{
+    width:300px;
+    min-height:300px;
+    margin: 5px;
+    background-color: rgb(175, 225, 175);
+    text-align: center;
+    padding-top: 60px;
+    border-radius: 50px;
+  }
+
+</style>
+
+<h1 class='pageTitle'>Plants to cheer you up</h1>
+
+<section class='flexibox'>
 <% plants.forEach(function(plant){ %>
 
- <body style="background-color: greenyellow">
+ <!-- <body style="background-color: greenyellow"> -->
 
   <ul style="text-align: center;" class="plants-looping">
+    <div class ='flexibox-input'> 
       <div class="single-plant">
-          <span class="date" style="text-align:left">
-          <%= plant.Common_Name%>
+          <span class="date" >
+          <h3 class='plantName'><%= plant.Common_Name%></h3>
           <br>
           <img src='img/<%=plant.img_name%>' style='height:100px; width:100px;'>
           <br>
-          <form id= 'Buy plant'action='/confirmation' method='Get' action='Buy plant'>
-           <h1 style="text-align:center"> <button> Buy plant </button> </h1>
-          </form>
           <form id = 'get-more-info' method='GET' action='/plants/<%= plant.id%>'> 
-            <h1 style="text-align:center"><button type='submit'> View details</button></h1>
+            <button class="btn btn-primary btn-lg outline" type='submit'>View details</button>
           </form>
       </div>
     </ul>
 </body>
+</div> 
   <% }) %>
+
+
+</section>
