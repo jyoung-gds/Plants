@@ -11,7 +11,7 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .pageTitle {
-  font-size:200%;
+  font-size:350%;
   text-align: center;
 }
 
@@ -23,6 +23,18 @@ font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
   font-size: 40px;
 }
+
+.logo{
+  padding-left: 5px;
+  font-size: 125px;
+  /* font-size: 75px; */
+  color: white;
+  font-family: 'Unica One';
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(79,121,66);
+  /* font-style: italic; */
+}
+
 
 /**************************
   BUTTONS - DEFAULT BOOTSTRAP STYLES

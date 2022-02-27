@@ -8,15 +8,6 @@
   <link rel='stylesheet' href='/stylesheets/style.css'>
   <style> 
 
-  /* body {
-    font-family: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
-    font-style: inherit;
-    font-weight: 400;
-    text-align: center;
-    font-size: 16px;
-    line-height: 20px;
-  } */
-
   #intro{
     text-align: center;
     font-size: 40px;
@@ -51,10 +42,13 @@
 			font-size: 1.5rem;
 		}
 
-    form{
-      padding: 16px;
+    .flexcomponent{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      /* padding: 16px;
       width: 320;
-      margin: 0 auto;
+      margin: 0 auto; */
       /* background-color: rgb(104, 152, 111);} */
     }
 
@@ -84,7 +78,7 @@
 </head>
 <body>
   <section id='intro'>
-    <h1>Plant Doctor</h1>
+    <h1 style='font-size:200%'>Plant Doctor</h1>
     <p>Start scrolling to get your advice!</p>
     <img src='https://images.squarespace-cdn.com/content/v1/556ea5c8e4b081da85e406c7/1588138783050-XSITJQ6CAQ1G3DY1625A/How-to-Make-a-Plant-Love-You-book-walk.gif?format=200w.gif'>
   </section>
@@ -106,32 +100,29 @@
     </article>
   </section>
   <h1 style='text-align: center;'>Complete the form below to get advice. We'll get your planty friends looking green again!</h1>
-  <section id = 'form'>
-    <form>
-      <ul>
-      <label>
-        <ul> <input type="text" placeholder="Name"/> </ul>
+  
+  <section id = 'flexcomponent'>
+    <form action ='/doctor/recieved' method='GET'>
+      <label class = 'flexbox-item flexbox-item1'>
+        <input type="text" placeholder="Name"/> 
       </label>
-      <label>
-        <ul> <input type="text" placeholder="Email Address"/></ul>
+      <label class = 'flexbox-item flexbox-item2'>
+         <input type="text" placeholder="Email Address"/> 
       </label>
-      <label>
-        <ul> <input type="password" placeholder="Password"/></ul>
+      <!-- <label class = 'flexbox-item flexbox-item3'>
+         <input type="password" placeholder="Password"/> 
+      </label> -->
+      <label class = 'flexbox-item flexbox-item4'>
+        <input type="text" placeholder="Plant type"/> 
       </label>
-      <label>
-        <ul> <input type="text" placeholder="Plant type"/></ul>
-      </label>
-      <label>
-        <ul>  <input id='description' type="text" placeholder="Description"/></ul>
+      <label class = 'flexbox-item flexbox-item5'>
+        <input id='description' type="text" placeholder="Description"/>
       </label>
       <!-- <label>
         <ul>  <input id="photo" type="file" name="photo"></ul>
       </label> -->
-      <form action ='/' method='GET'>
-      <button class= 'submit-button' type="submit">Get answers</button>
-    </form>
-    </ol>
-    </form>
+        <button class= 'submit-button flexbox-item flexbox-item6 center' type="submit">Get answers</button>
+      </form>
   </section>
 
   

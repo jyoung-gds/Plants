@@ -3,7 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height:100px;
+  height:125px;
+  width: 100%;
   background-color: rgb(104, 152, 111);
   color: rgb(255, 255, 255);
 }
@@ -51,7 +52,7 @@
 
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .toggle-button {
     display: flex;
   }
@@ -81,4 +82,4 @@
   .navBar-links.active {
     display: flex;
   }
-}
+} */
