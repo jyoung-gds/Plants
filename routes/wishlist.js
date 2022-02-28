@@ -1,9 +1,9 @@
-// const express = require('express');
-// const router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-// const WishlistController = require('../controllers/wishlist');
+const WishlistController = require('../controllers/wishlist.js');
 
-// router.post('/', WishlistController.New);
-// router.get('/', WishlistController.Index);
+router.post('/add/:id', WishlistController.Add);
+router.get('/', WishlistController.Index);
 
-// module.exports = router;
+module.exports = router;
