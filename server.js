@@ -9,6 +9,7 @@ const filterRouter = require('./routes/filter.js');
 const plantsRouter = require('./routes/plants.js');
 const confirmationRouter = require('./routes/confirmation.js');
 const wishlistRouter = require('./routes/wishlist.js');
+const mapRouter = require('./routes/map.js');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -33,3 +34,4 @@ app.use('/filter', filterRouter);
 app.use('/plants', plantsRouter);
 app.use('/confirmation', confirmationRouter);
 app.use('/wishlist', wishlistRouter);
+app.use('/map', mapRouter);
