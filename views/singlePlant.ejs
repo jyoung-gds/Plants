@@ -28,7 +28,8 @@
   <br>
   <h3>AIR PURIFYING? </h3><p><%=plant[0].Air_Purifying%></p>
   <br>
-  <form id= 'Buy plant'action='/confirmation' method='Get'>
+  <!-- <form id= 'Buy plant'action='/confirmation' method='Get'></form> -->
+  <form id= 'Buy plant'action='/confirmation/quiz/<%=plant[0].id%>' method='Get'>
     <h1 style="text-align:center"> <button class="btn btn-primary btn-lg outline"> Buy plant </button> </h1>
   </form>
   <!-- <form id='wishlist' action='/wishlist/add/<%=plant[0].id%>' method='POST'>  -->
