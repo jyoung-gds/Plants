@@ -1,22 +1,44 @@
-<h1>Plants for you!</h1>
+<style>
+  
+  .flexibox{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 
+.flexibox-input{
+    width:300px;
+    min-height:300px;
+    margin: 5px;
+    background-color: rgb(175, 225, 175);
+    text-align: center;
+    padding-top: 60px;
+    border-radius: 50px;
+  }
+
+</style>
+
+
+
+<h1 class='pageTitle'>Plants for you!</h1>
+
+<section class='flexibox'>
 <%if (filteredPlants.length == 0){%>
-  <h2>Sorry, we don't have anything that matches your criteria.</h2>
+  <h2 style='text-align: center;'>Sorry, we don't have anything that matches your criteria.</h2>
 <%} else {%>
 <% filteredPlants.forEach(function(plant){ %>
-  <li class="plants-looping">
-      <div class="single-plant">
-          <span class="date" style="text-align:left">
-          <%= plant.Common_Name%>
-          <br>
-          <form method='GET' action='/plants/<%= plant.id%>'> 
-          <%= plant.Scientific_Name%></a>
-          <button type='submit'> Get more info!</button>
-          </form>
+    <div class ='flexibox-input'> 
+          <h3 class='plantName'><%= plant.Common_Name%></h3>
           <br>
           <img src='/img/<%=plant.img_name%>' style='height:100px; width:100px;'>
           <br>
+          <form method='GET' action='/plants/<%= plant.id%>'> 
+          <button type='submit' class="btn btn-primary btn-lg outline"> Get more info!</button>
+          </form>
+          <br>
       </div>
-  </li>
   <% })%>
   <% }%>
+</section>

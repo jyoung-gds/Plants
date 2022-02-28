@@ -27,6 +27,10 @@ const PlantsController = {
       res.render('singlePlant', {plantID: req.params.id, plant: plantSelected});
     });
   },
+
+  Recieved: function(req, res) {
+    res.render('plantDocRecieved');
+  },
 };
 
 module.exports = PlantsController;
