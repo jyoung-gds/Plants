@@ -17,14 +17,24 @@
         const uluru = { lat: 51.5291, lng: 0.0698 };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 13,
+          zoom: 8,
           center: uluru,
         });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
+
+        function newMarker(coords){
+          var marker = new google.maps.Marker({
+            position: coords,
+            map: map})
+        }
+
+        newMarker({lat: 51.5291 , lng: 0.0698});
+        newMarker({lat: 52.5291, lng: 1.0698});
+      
+        // var flowerMarkets = [{lat: 51.5291 , lng: 0.0698}, {lat: 39.2842, lng: 76.5934}];
+        // for (i=0; i<=flowerMarkets.length;i++){  
+        //   console.log(flowerMarkets[i]);
+        //   newMarker(flowerMarkets[i]);
+        // }
       }
     </script>
   </head>
