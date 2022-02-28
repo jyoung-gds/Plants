@@ -1,0 +1,47 @@
+body {
+  font-family: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-style: inherit;
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#intro{
+  text-align: center;
+  font-size: 40px;
+}
+
+#scrolly{
+  position:relative
+}
+
+article {
+    position: relative;
+    text-align: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+    width: 33%;
+  }
+
+  .step {
+    margin: 2rem auto 4rem auto;
+    background-color: green;
+    color: #fff;
+  }
+
+  .step.is-active {
+    background-color: greenyellow;
+    color: #3b3b3b;
+  }
+
+  .step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  /* #form{
+    text-align: left;
+    padding-left: 550px;
+  } */

@@ -1,8 +1,40 @@
-<h1>Select Your Filters!</h1>
+<style>
 
-  <form id='plant-filtering-form' action='/filter/results' method="GET" >  
-    <label for="sunlight">Sunlight:</label>
-    <select id="sunlight" name="sunlight">
+  .flexibox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:green;
+
+  }
+
+  .flexibox-input{
+    width:300px;
+    min-height:250px;
+    margin: 5px;
+    background-color: rgb(175, 225, 175);
+    text-align: center;
+    padding-top: 60px;
+    border-radius: 25px;
+  }
+
+  .flexibox-5{
+    background-color: white;
+  }
+
+</style>
+
+
+<h1 class='pageTitle'> Find your perfect plant</h1>
+
+<form id='plant-filtering-form' action='/filter/results' method="GET" >  
+<div class='flexibox'>
+  <div class='flexibox-input flexibox-1'>
+    <h2> <label for="sunlight">SUNLIGHT</label></h2>
+    <br>
+    <select id="sunlight" name="sunlight" class="btn btn-primary outline">
       <option value="Full sun">Full Sun</option>
        <option value="Full sun to part sun">Full Sun to Part Sun</option>
        <option value="Full sun to part shade">Full Sun to Part Shade</option>
@@ -10,30 +42,36 @@
        <option value="Part shade to full shade">Part shade to full shade</option>
        <option value="Part sun to part shade">Part sun to part shade</option>
     </select>
-  <br>  
-  <label for="moisture">Moisture:</label>
-     <select id="moisture" name="moisture">
+  </div>
+  <div class='flexibox-input flexibox-2'>
+    <h2> <label for="moisture">MOISTURE</label></h2>
+     <select id="moisture" name="moisture" class="btn btn-primary outline">
       <option value="Low">Low</option>
       <option value="Low to medium">Low to Medium</option>
       <option value="Medium">Medium</option>
       <option value="Medium to high">Medium to High</option>
     </select>
-  <br>  
-  <label for="indoor-flowering">Indoor Flowering:</label>
-    <select id="indoor-flowering" name="indoorFlowering">
+  </div>
+  <div class='flexibox-input flexibox-3'>
+    <h2><label for="indoor-flowering">INDOOR FLOWERING</label></h2>
+    <select id="indoor-flowering" name="indoorFlowering" class="btn btn-primary outline">
       <option value="Yes">Yes</option>
       <option value="No">No</option>
       <option value="Rarely">Rarely</option>
       <option value="N/A">N/A</option>
     </select>
-  <br>  
-  <label for="toxic-to-animals">Toxic to Animals:</label>
-    <select id="toxic-to-animals" name="toxicToAnimals">
+  </div>
+  <div class='flexibox-input flexibox-4'>
+    <h2><label for="toxic-to-animals">TOXIC TO ANIMALS</label> </h2>
+    <select id="toxic-to-animals" name="toxicToAnimals" class="btn btn-primary outline">
       <option value="Yes">Yes</option>
       <option value="No">No</option>
     </select> 
-    <br>
-  <input type="submit" value="Submit">
+  </div>
+  <div class='flexibox-input flexibox-5'>
+    <input class="btn btn-primary btn-lg outline" type="submit" value="Submit">
+  </div>
+</div>
 </form>
 
 

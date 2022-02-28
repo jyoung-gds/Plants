@@ -17,7 +17,19 @@ const PlantsController = {
   },
 
   Single: function(req, res) {
-    res.send('hello - single plant with ID');
+    const plantIDClicked = req.params.id;
+    Plant.find({_id: plantIDClicked}).exec(function(err, plantSelected) {
+      if (err) {
+        throw err;
+      }
+
+      // console.log(plant);
+      res.render('singlePlant', {plantID: req.params.id, plant: plantSelected});
+    });
+  },
+
+  Recieved: function(req, res) {
+    res.render('plantDocRecieved');
   },
 };
 

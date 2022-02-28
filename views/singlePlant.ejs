@@ -1,0 +1,63 @@
+<link rel='stylesheet' href='/stylesheets/singlePlant.css'>
+
+<div class='flexbox-component'>
+  <div class= 'flexi-box flexi-box-1'>
+    <div class='plantName'>
+      <h1><%=plant[0].Common_Name %></h1>
+      </div>
+    <div class='img-compontent'>
+    <img class= 'center' src='/img/<%=plant[0].img_name%>' style='height:400px; width:400px;'>
+    </div>
+  </div>
+  <div class= 'flexi-box flexi-box-2'>
+
+
+<ul>
+  <h3>SCIENTIFIC NAME:</h3><p><%=plant[0].Scientific_Name%></p>
+  <br>
+  <h3>TYPE:</h3><p><%=plant[0].Type%></p>
+  <br>
+  <h3>SUNLIGHT:</h3><p><%=plant[0].Sunlight%></p>
+  <br>
+  <h3>WATERING NEEDS:</h3><p><%=plant[0].Moisture%></p>
+  <br>
+  <h3>TOXIC TO ANIMALS?</h3><p><%=plant[0].Toxic_Dogs%></p>
+  <br>
+  <h3>BLOOM PERIOD:</h3><p><%=plant[0].Bloom_Period%></p>
+  <br>
+  <h3>BLOOM DESCRIPTION:</h3><p><%=plant[0].Bloom_Description%></p>
+  <br>
+  <h3>AIR PURIFYING? </h3><p><%=plant[0].Air_Purifying%></p>
+  <br>
+  <form id= 'Buy plant'action='/confirmation' method='Get'>
+    <h1 style="text-align:center"> <button class="btn btn-primary btn-lg outline"> Buy plant </button> </h1>
+  </form>
+  <form id='wishlist' action='/wishlist/add/<%=plant[0].id%>' method='POST'>
+    <h1 style="text-align:center"> <button class="btn btn-primary btn-lg outline"> Add to wishlist </button> </h1>
+  </form>
+
+  </div>
+
+</div>
+
+<!-- 
+  <li>Scientific name:<%=plant[0].Scientific_Name%></li>
+  <li>Sunlight: <%=plant[0].Sunlight %></li>
+  <li>Moisture: <%=plant[0].Moisture %></li>
+  <li>Soil indicator: <%=plant[0].Soil_Indicator %></li>
+  <li>Plant spread: <%=plant[0].Plant_Spread %></li>
+  <li>Plant heightL <%=plant[0].Plant_Height %></li>
+  <li>Indoor spread: <%=plant[0].Indoor_Spread %></li>
+  <li>Indoor height: <%=plant[0].Indoor_Height %></li>
+  <li>Toxic dogs: <%=plant[0].Toxic_Dogs %></li>
+  <li>Toxic cats: <%=plant[0].Toxic_Cats %></li>
+  <li>Plant habit: <%=plant[0].Plant_Habit %></li>
+  <li>Type: <%=plant[0].Type %></li>
+  <li>Indoor flowering: <%=plant[0].Indoor_Flowering %></li>
+  <li>Hanging: <%=plant[0].Hanging %></li>
+  <li>Bloom period: <%=plant[0].Bloom_Period %></li>
+  <li>Humidity: <%=plant[0].Humidity %></li>
+  <li>Air purifying: <%=plant[0].Air_Purifying %></li>
+  <li>Ph soil: <%=plant[0].Ph_Soil %></li>
+  <li>Bloom description: <%=plant[0].Bloom_Description %></li>
+  </ul> -->

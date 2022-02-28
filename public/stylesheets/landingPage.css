@@ -1,0 +1,75 @@
+/* .logo{
+  /* height:250px; */
+  /* font-family: "Apercu Pro", -apple-system, BlinkMacSystemFont, Helvetica, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 50px;
+  line-height: 20px;
+} */  
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.flexbox-container{
+  padding-top: 50px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* background-color: thistle; */
+
+}
+
+.flexbox-item{
+  width: 750px;
+  margin:10px;
+  min-height:500px;
+  /* border: 3px solid black; */
+  /* background-color: white; */
+}
+
+.flexbox-item-1 {
+  min-height:500px;
+  align-items: center;
+}
+
+.flexbox-item-2{
+  min-height:500px;
+}
+
+.flexbox-item-1 img {
+  padding-left: 52px;
+  height:650px;
+  width:646px;
+}
+
+.flexbox-item-2 img {
+  padding-top: 10px;
+  height:500px;
+  width:750px;
+}
+
+.header-links{
+  font-color:rgb(104, 152, 111)
+}
+
+button{
+  border: white;
+  /* color: white; */
+
+  background-color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+  text-align: center;
+  /* text-decoration: none; */
+  display: inline-block;
+  font-size: 35px;
+  margin: 4px 2px;
+  /* border-radius: 75%; */
+}
+
+
