@@ -14,10 +14,10 @@
       // Initialize and add the map
       function initMap() {
         // The location of Uluru
-        const uluru = { lat: 51.5291, lng: 0.0698 };
+        const uluru = { lat: 51.5251, lng: 0.1248 };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 8,
+          zoom: 11,
           center: uluru,
         });
 
@@ -27,19 +27,33 @@
             map: map})
         }
 
-        newMarker({lat: 51.5291 , lng: 0.0698});
-        newMarker({lat: 52.5291, lng: 1.0698});
-      
-        // var flowerMarkets = [{lat: 51.5291 , lng: 0.0698}, {lat: 39.2842, lng: 76.5934}];
-        // for (i=0; i<=flowerMarkets.length;i++){  
-        //   console.log(flowerMarkets[i]);
-        //   newMarker(flowerMarkets[i]);
-        // }
+        // Marchmont Community Garden
+        newMarker({lat: 51.5251 , lng: 0.1248});
+
+        // Culpeper Community Garden
+        newMarker({lat: 51.5348, lng: 0.1096});
+
+        // Cottington Community Garden
+        newMarker({lat: 51.4902, lng: 0.1060});
+
+        // The Phoenix Garden
+        newMarker({lat: 51.5146, lng: 0.1286});
+
+        // Emslie Horniman Community Garden
+        newMarker({lat: 51.5246, lng: 0.2105});
+
+        // Godolphin Community Gardens
+        newMarker({lat: 51.5038, lng: 0.2323});
+
+        // Brockwell Park Community Greenhouses
+        newMarker({lat: 51.4504, lng: 0.1086});
+
       }
     </script>
   </head>
   <body>
-    <h3 class='pageTitle'>Find your local flower markets</h3>
+    <h3 class='pageTitle'>Find a community garden near you</h3>
+    <h4 style='text-align: center; font-size: 20px;font-weight: normal;'>Let's be realistic, we aren't all green fingered so why don't we leverage existing communities to collectively build gardens.</h4>
     <!--The div element for the map -->
     <div id="map"></div>
 
