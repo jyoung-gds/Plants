@@ -1,6 +1,6 @@
 const Plant = require('../models/plants');
-const FilterController = {
 
+const FilterController = {
   New: function(req, res) {
     res.render('form/index');
   },

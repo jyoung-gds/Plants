@@ -11,6 +11,9 @@ const WeatherController = {
     // Converts postcode to latitude & longitude
     Geolocator.GetLatLon(postcode)
         .then((latLon) => {
+          return `lat=${latLon[0]}&lon=${latLon[1]}`;
+        })
+        .then((latLon) => {
           // Gets the weather statistics for given latitude and longitude
           Weather.GetCumulativeWeather(latLon)
               .then((cumulativeWeather) => {

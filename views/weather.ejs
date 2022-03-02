@@ -6,15 +6,11 @@
 </form>
 
 <% if (weather != null) { %>
-<h2> The average temperature in your location is <%= weather.temp %> degrees Celsius.</h2>
-<h2> The average cloud cover in your location is <%= weather.clouds %>%.</h2>
-<h2> The average rainfall in your location is <%= weather.precipitation %> mm.</h2>
-<h2> The average wind speed in your location is <%= weather.wind %> m/s.</h2>
-<h2> The average pressure in your location is <%= weather.pressure %> millibars.</h2>
-<h2> The average humidity in your location is <%= weather.humidity %>%.</h2>
-<h2> Per month you get <%= weather.sunshine %> hours of sunshine.</h2>
+<p> Average temperature: <%= weather.temp %> degrees Celsius</p>
+<p> Average cloud cover: <%= weather.clouds %>%</p>
+<p> Average rainfall: <%= weather.precipitation %> mm</p>
+<p> Average wind speed: <%= weather.wind %> m/s</p>
+<p> Average pressure: <%= weather.pressure %> millibars</p>
+<p> Average humidity: <%= weather.humidity %>%</p>
+<p> Average sunshine: <%= weather.sunshine %> hours/month</p>
 <% } %>
-
-<!-- Where in the house will you keep your plant? --> 
-
-

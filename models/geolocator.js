@@ -8,7 +8,7 @@ const Geolocator = {
           return response.json();
         })
         .then((data) => {
-          const latLon = `lat=${data.lat}&lon=${data.lon}`;
+          const latLon = [data.lat, data.lon];
           return latLon;
         });
   },
