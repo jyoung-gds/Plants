@@ -1,6 +1,6 @@
 const MapsControler = {
   Index: function(req, res) {
-    res.render('map');
+    res.render('mapBox');
   },
 };
 
