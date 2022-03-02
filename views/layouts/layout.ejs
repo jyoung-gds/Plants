@@ -23,6 +23,11 @@
       <li><a href="/">Home</a></li>
       <li><a href="/plants">View all plants</a></li>
       <li><a href="/filter/new">Pick your plant</a></li>
+      <li><a href="/users/new">Sign Up</a></li>
+      <li><a href="/sessions/new">Log In</a></li>
+      <form id= 'log-out'action='/sessions?_method=DELETE' method='POST'>
+      <li><a href="javascript:{}" onclick= "document.getElementById('log-out').submit(); return false;">Log out</a> </li> 
+      </form>
       <li><a href="/wishlist">Wishlist</a></li>
       <li><a href="/plants/doctor">Plant doctor</a></li>
       <li><a href="/map">Community Gardens</a></li>
