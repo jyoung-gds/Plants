@@ -25,10 +25,11 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo{
+  /* text-align: center; */
   padding-left: 5px;
   font-size: 125px;
-  /* font-size: 75px; */
   color: white;
+  /* font-size: 45px; */
   font-family: 'Unica One';
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(79,121,66);

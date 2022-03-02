@@ -10,8 +10,7 @@
     </div>
   </div>
   <div class= 'flexi-box flexi-box-2'>
-
-
+    
 <ul>
   <h3>SCIENTIFIC NAME:</h3><p><%=plant[0].Scientific_Name%></p>
   <br>
@@ -29,10 +28,12 @@
   <br>
   <h3>AIR PURIFYING? </h3><p><%=plant[0].Air_Purifying%></p>
   <br>
-  <form id= 'Buy plant'action='/confirmation' method='Get'>
+  <!-- <form id= 'Buy plant'action='/confirmation' method='Get'></form> -->
+  <form id= 'Buy plant'action='/confirmation/quiz/<%=plant[0].id%>' method='Get'>
     <h1 style="text-align:center"> <button class="btn btn-primary btn-lg outline"> Buy plant </button> </h1>
   </form>
-  <form id='wishlist' action='/wishlist/add/<%=plant[0].id%>' method='POST'>
+  <!-- <form id='wishlist' action='/wishlist/add/<%=plant[0].id%>' method='POST'>  -->
+  <form id='wishlist' action='/wishlist/add/<%=plant[0].id%>/<%=plant[0].Common_Name%>' method='POST'> 
     <h1 style="text-align:center"> <button class="btn btn-primary btn-lg outline"> Add to wishlist </button> </h1>
   </form>
 
