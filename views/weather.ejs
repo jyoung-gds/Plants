@@ -1,0 +1,20 @@
+<h1> Get your weather</h1>
+
+<form id="location-form" action="/weather" method="post">
+  <input type="text" name="postcode" placeholder="Postcode">
+  <input type="submit" value="Submit">
+</form>
+
+<% if (weather != null) { %>
+<h2> The average temperature in your location is <%= weather.temp %> degrees Celsius.</h2>
+<h2> The average cloud cover in your location is <%= weather.clouds %>%.</h2>
+<h2> The average rainfall in your location is <%= weather.precipitation %> mm.</h2>
+<h2> The average wind speed in your location is <%= weather.wind %> m/s.</h2>
+<h2> The average pressure in your location is <%= weather.pressure %> millibars.</h2>
+<h2> The average humidity in your location is <%= weather.humidity %>%.</h2>
+<h2> Per month you get <%= weather.sunshine %> hours of sunshine.</h2>
+<% } %>
+
+<!-- Where in the house will you keep your plant? --> 
+
+
