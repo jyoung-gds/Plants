@@ -16,6 +16,7 @@ const confirmationRouter = require('./routes/confirmation.js');
 const wishlistRouter = require('./routes/wishlist.js');
 const sessionsRouter = require('./routes/sessions.js');
 const usersRouter = require('./routes/users.js');
+const mapRouter = require('./routes/map.js');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -27,7 +28,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(logger('dev'));
 
 
-const mongoDbUrl = process.env.MONGODB_URL || 'mongodb://localhost/plants';
+const mongoDbUrl = process.env.MONGODB_URI || 'mongodb+srv://plantasia-team:plantasia@plantasia.ahzb4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
 mongoose.connect(mongoDbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -72,4 +74,5 @@ app.use('/confirmation', confirmationRouter);
 app.use('/wishlist', wishlistRouter);
 app.use('/sessions', sessionsRouter);
 app.use('/users', usersRouter);
-app.use('/plants', sessionChecker);
+//app.use('/plants', sessionChecker);
+app.use('/map', mapRouter);

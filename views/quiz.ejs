@@ -1,0 +1,63 @@
+<style>
+
+  .flexibox{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:green;
+    padding-left: 600px;
+
+  }
+
+  .flexibox-input{
+    width:300px;
+    min-height:250px;
+    margin: 5px;
+    background-color: rgb(175, 225, 175);
+    text-align: center;
+    padding-top: 60px;
+    border-radius: 25px;
+  }
+
+  .flexibox-5{
+    background-color: white;
+  }
+
+</style>
+
+<h1 style="text-align: center;">To stop you form potentially killing your plants we want to check you know your plant</h1>
+<h3 style="text-align: center;">If you don't, we'll help you pick a plant that you can take care of! </h3>
+<form id='buy-quiz' action='/confirmation/quiz/<%=plantID%>/result' method="GET" >  
+  <div class='flexibox'>
+    <div class='flexibox-input flexibox-1'>
+      <h2><label for="soil-indicator">Soil conditions to be maintained:</label></h2>
+      <select id="soil-indicator" name="soilIndicator" class="btn btn-primary outline">
+       <option value="Dry">Dry</option>
+       <option value="Nearly dry">Nearly dry</option>
+       <option value="Never dry">Never dry</option>
+       <option value="Slightly dry">Slightly dry</option>
+      </select>
+    </div>
+    <div class='flexibox-input flexibox-2'>
+    <h2><label for="type">Type of plant:</label></h2>
+       <select id="type" name="type" class="btn btn-primary outline">
+        <option value="Annual Perennial">Annual Perennial</option>
+        <option value="Broadleaf evergreen">Broadleaf evergreen</option>
+        <option value="Deciduous shrub">Deciduous shrub</option>
+        <option value="Fern">Fern</option>
+        <option value="Herbaceous perennial">Herbaceous perennial</option>
+        <option value="Needled evergreen">Needled evergreen</option>
+        <option value="Palm/Cycad">Palm/Cycad</option>
+        <option value="Perennial">Perennial</option>
+        <option value="Vine">Vine</option>
+      </select>
+    </div>
+
+    <div class='flexibox-input flexibox-5'>
+      <input class="btn btn-primary btn-lg outline" type="submit" value="Submit">
+    </div>
+  </div>
+</form>
+  
