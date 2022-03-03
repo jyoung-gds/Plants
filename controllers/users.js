@@ -19,9 +19,8 @@ const UsersController = {
       if (err) {
         throw err;
       }
-
-      req.session.user = user;
-      res.status(201).redirect('/plants');
+      
+      res.status(201).redirect('/sessions/new');
     });
   },
 };

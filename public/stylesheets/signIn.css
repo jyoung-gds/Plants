@@ -1,0 +1,75 @@
+
+
+body { 
+
+  font-family: 'Rototo', sans-serif;
+}
+
+.signup-box{
+  width: 400px;
+  height: 500px;
+  /* change the box to center */
+  margin: auto;
+  background-color: rgb(104, 152, 111);
+  border-radius: 3px;
+  color:white;
+}
+
+.login-box{
+  padding-top: 10x;
+  width: 360px;
+  height: 500px;
+  margin: auto;
+  background-color: rgb(104, 152, 111);
+  border-radius: 10px;
+  color: white;
+
+}
+
+form{
+  width: 300px;
+   margin: auto;
+}
+
+form label{
+  display: flex;
+  margin-top: 20px;
+  font-size: 20px;  
+}
+
+form input{
+  width:100%;
+  padding: 10px;
+  border: none;
+  border: 1px solid rgb(0, 128, 85);
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="submit"]{
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  border: white solid;
+  background-color: rgb(104, 152, 111);
+  color: white;
+  font-size: 10px;
+  
+}
+
+p{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.p2{ 
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.p2 a{ 
+  color: white;
+}
+

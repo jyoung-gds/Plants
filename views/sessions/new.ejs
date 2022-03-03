@@ -1,5 +1,16 @@
-<div style='padding-left: 10px;'>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/signIn.css" /> 
+</head>
+<body>
+
+<div class="login-box" style="text-align: center;">
   <h1>Log in</h1>
+
   <%= incorrectPassword %>
   <form id="new-session-form" action="/sessions" method="post">
     <label for="email">Email: </label>
@@ -11,6 +22,10 @@
     <input id="password" type="password" name="password" value="">
     <br>
     <br>
-    <input type="submit" class="btn btn-primary btn-lg outline" value="Submit">
+    <input type="submit" value="Submit">
+    <p class="p2"> Don't have an account? <a href="/users/new"> Sign Up Here</a></p>
   </form>
   </div>
+  <br></br>
+</body>
+</html>
