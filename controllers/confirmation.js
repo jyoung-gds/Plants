@@ -23,11 +23,6 @@ const ConfirmationController = {
       // eslint-disable-next-line no-var
       var dbResultType = results[0].Type;
 
-      // console.log(dbResultSoil);
-      // console.log(req.query.soilIndicator );
-      // console.log(dbResultType);
-      // console.log(req.query.type );
-
       if (dbResultSoil == req.query.soilIndicator && dbResultType == req.query.type) {
         res.render('./form/confirmation');
       }
