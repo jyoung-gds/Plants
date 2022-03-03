@@ -42,18 +42,17 @@
     <h4 style='text-align: center; font-size: 20px;font-weight: normal;'>Let's be realistic, we aren't all green fingered so why don't we leverage existing communities to collectively build gardens.</h4>
 
     <form id="postcode-input" action="/map" method="post">
+      <h4 style="text-align:center;font-size: 20px;font-weight: normal;">Click on the map for where you want to go and get directions.</h4>
       <h4 style="text-align:center;font-size: 20px;font-weight: normal;">Enter the first part of your postcode below to get directions from home </h4>
         <div class="center" style="margin-left: 600px;"> 
-        <input class="btn btn-primary outline" type="text" name="postcode" placeholder="NW1">
+        <input class="btn btn-primary outline" type="text" name="postcode" placeholder="NW3">
         <input class=" btn btn-primary outline" type="submit" value="Submit">
       </div>
     </form>
 
-    <div id='postcodeParam'><%=postcode%></div>
-    
-
     <div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="794" height="704" style="width: 794px; height: 704px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox" role="listitem">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap" role="listitem">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=streets-v11&amp;access_token=pk.eyJ1IjoiZXhhbXBsZXMiLCJhIjoiY2p0MG01MXRqMW45cjQzb2R6b2ptc3J4MSJ9.zA2W0IkI0c6KaAhJfk9bWg" target="_blank" title="Improve this map" aria-label="Map feedback" role="listitem" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
     <div id="instructions"><p><strong>Trip duration: 0 min 🚴 </strong></p><ol><li>Head east</li><li>You have arrived at your destination</li></ol></div>
+    <div id='postcodeParam' style='font-size:5px' ><%=postcode%></div>
     <script>
       // Getting the vlaue of the postcode params
       var postcode = document.getElementById('postcodeParam').innerHTML;
@@ -67,8 +66,6 @@
         var splitPostcode = postcode.split(',');
         var lng = splitPostcode[1];
         var lat = splitPostcode[0];
-        // console.log(lng);
-        // console.log(Number(lng));
         return ([Number(lng),Number(lat)]);
       }
 
