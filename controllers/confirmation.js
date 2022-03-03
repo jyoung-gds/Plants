@@ -21,9 +21,9 @@ const ConfirmationController = {
       // eslint-disable-next-line no-var
       var dbResultSoil = results[0].Soil_Indicator;
       // eslint-disable-next-line no-var
-      var dbResultType = results[0].Type;
+      var dbResultType = results[0].Sunlight;
 
-      if (dbResultSoil == req.query.soilIndicator && dbResultType == req.query.type) {
+      if (dbResultSoil == req.query.soilIndicator && dbResultType == req.query.sunlight) {
         res.render('./form/confirmation');
       }
       res.render('./form/index');
