@@ -20,10 +20,10 @@
 
 </style>
 
-<h1 class='pageTitle'>Wishlist Plants</h1>
+<h1 class='pageTitle'>Wishlist</h1>
+<h4 style='text-align: center; font-weight: normal;'>Maybe one day...</h4>
 
 <section class='flexibox'>
-<%=plants%>
 <% plants.forEach(function(plant){ %>
 
  <!-- <body style="background-color: greenyellow"> -->
@@ -32,11 +32,9 @@
     <div class ='flexibox-input'> 
       <div class="single-plant">
           <span class="date" >
-          <h3 class='plantName'><%= plant.Common_Name%></h3>
+          <h3 class='plantName'><%= plant.Name%></h3>
           <br>
-          <img src='img/<%=plant.img_name%>' style='height:100px; width:100px;'>
-          <br>
-          <form id = 'get-more-info' method='GET' action='/plants/<%= plant.id%>'> 
+          <form id = 'get-more-info' method='GET' action='/plants/<%= plant.plantID%>'> 
             <button class="btn btn-primary btn-lg outline" type='submit'>View details</button>
           </form>
       </div>

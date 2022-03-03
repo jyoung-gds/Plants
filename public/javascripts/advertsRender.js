@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 // script adapted from Kaboodle (https://github.com/ptsteadman/kaboodle)
 
 (function advertRender(window, undefined) {
