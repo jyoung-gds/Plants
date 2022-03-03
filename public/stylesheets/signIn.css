@@ -1,0 +1,39 @@
+
+
+body { 
+  background-color: #344a72;
+  font-family: 'Rototo', sans-serif;
+}
+
+.signup-box{
+  width: 360px;
+  height: 620px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+h1{
+  text-align: center;
+  padding-top: 15px;
+}
+
+h4{
+  text-align: center;
+}
+
+form label{
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;  
+}
+
+form input{
+  width:100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid rgb(0, 128, 85);
+  border-radius: 6px;
+  outline: none;
+}
+
