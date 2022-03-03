@@ -15,6 +15,7 @@ const filterRouter = require('./routes/filter.js');
 const plantsRouter = require('./routes/plants.js');
 const confirmationRouter = require('./routes/confirmation.js');
 const wishlistRouter = require('./routes/wishlist.js');
+const weatherRouter = require('./routes/weather.js');
 const sessionsRouter = require('./routes/sessions.js');
 const usersRouter = require('./routes/users.js');
 const mapRouter = require('./routes/map.js');
@@ -57,15 +58,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// middleware function to check for logged-in users
-
-const sessionChecker = (req, res, next) => {
-  if (!req.session.user && !req.cookies.user_sid) {
-    res.redirect('/sessions/new');
-  } else {
-    next();
-  }
-};
 
 
 app.use('/', indexRouter);
@@ -73,7 +65,7 @@ app.use('/filter', filterRouter);
 app.use('/plants', plantsRouter);
 app.use('/confirmation', confirmationRouter);
 app.use('/wishlist', wishlistRouter);
+app.use('/weather', weatherRouter);
 app.use('/sessions', sessionsRouter);
 app.use('/users', usersRouter);
-//app.use('/plants', sessionChecker);
 app.use('/map', mapRouter);

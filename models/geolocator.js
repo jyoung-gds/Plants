@@ -9,7 +9,6 @@ const Geolocator = {
         })
         .then((data) => {
           const latLon = [data.lat, data.lon];
-          console.log(latLon);
           return latLon;
         });
   },
