@@ -1,12 +1,12 @@
 
 
-body { 
+/* body { 
 
   font-family: 'Rototo', sans-serif;
-}
+} */
 
 .signup-box{
-  width: 400px;
+  width: 360px;
   height: 500px;
   /* change the box to center */
   margin: auto;
@@ -21,18 +21,18 @@ body {
   height: 500px;
   margin: auto;
   background-color: rgb(104, 152, 111);
-  border-radius: 10px;
+  border-radius: 3px;
   color: white;
 
 }
 
 form{
-  width: 300px;
+  /* width: 300px; */
    margin: auto;
 }
 
 form label{
-  display: flex;
+  /* display: flex; */
   margin-top: 20px;
   font-size: 20px;  
 }

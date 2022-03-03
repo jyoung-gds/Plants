@@ -1,21 +1,25 @@
-<link rel="stylesheet" href="/stylesheets/signIn.css" /> 
+<head>
+<link rel="stylesheet" href="/stylesheets/signIn.css" > 
+<link rel="stylesheet" href="/stylesheets/style.css"> 
+</head>
+<body> 
 <div class="signup-box" style="text-align: center;">
   <h1>Sign up</h1>
 
  <form id="new-user-form" action="/users" method="post">
    <label for="email">Email: </label>
    <br />
-   <input id="email" type="email" name="email" value="">
+   <input style='width:300px;' id="email" type="email" name="email" value="">
    <br>
    <label for="password">Password: </label>
    <br/>
-   <input id="password" type="password" name="password" value="">
+   <input style='width:300px;' id="password" type="password" name="password" value="">
    <br/>
    <br/>
    <input type="submit" value="Submit">
    <p class="p2"> Already have an account? <a href="/sessions/new"> Login Here</a></p>  
  </form>
  </div>
-
+</body>
 
  
