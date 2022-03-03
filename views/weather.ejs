@@ -1,0 +1,16 @@
+<h1> Get your weather</h1>
+
+<form id="location-form" action="/weather" method="post">
+  <input type="text" name="postcode" placeholder="Postcode">
+  <input type="submit" value="Submit">
+</form>
+
+<% if (weather != null) { %>
+<p> Average temperature: <%= weather.temp %> degrees Celsius</p>
+<p> Average cloud cover: <%= weather.clouds %>%</p>
+<p> Average rainfall: <%= weather.precipitation %> mm</p>
+<p> Average wind speed: <%= weather.wind %> m/s</p>
+<p> Average pressure: <%= weather.pressure %> millibars</p>
+<p> Average humidity: <%= weather.humidity %>%</p>
+<p> Average sunshine: <%= weather.sunshine %> hours/month</p>
+<% } %>
